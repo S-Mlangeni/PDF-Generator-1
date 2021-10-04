@@ -22,12 +22,13 @@
         //Server settings - Using Gmail SMTP with TLS encryption:
         $mail->SMTPDebug = 0;//SMTP::DEBUG_SERVER;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com:587';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->SMTPSecure = "TLS";            //Enable implicit TLS encryption
+        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
         $mail->Username   = 'tkt4332@gmail.com';//$_ENV["USERNAME"];                     //SMTP username
         $mail->Password   = 'simz1653';//$_ENV["PASSWORD"];                               //SMTP password
-        $mail->SMTPSecure = "TLS";            //Enable implicit TLS encryption
-        //$mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
 
         //Recipients
         $mail->setFrom('tkt4332@gmail.com', "TK from SM");
