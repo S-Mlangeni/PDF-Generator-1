@@ -71,10 +71,10 @@ $ourpdf->setPaper('A4', 'portrait');
 $ourpdf->render();
 
 if (isset($_POST["checkbox"])) {
-    //$ourdoc = $ourpdf->output();
-    //$_SESSION["thepdf"] = $ourdoc;
+    $ourdoc = $ourpdf->output();
+    $_SESSION["thepdf"] = $ourdoc;
+    echo $_SESSION["thepdf"];
     //include "./email.php";
-    echo "yes";
 } else {
     // Output the generated PDF to Browser
     $ourpdf->stream("File.pdf", Array("Attachment"=>0));
