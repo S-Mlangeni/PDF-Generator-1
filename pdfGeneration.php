@@ -1,6 +1,4 @@
 <?php
-session_start();
-
 // For PHP mailer:
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -70,8 +68,10 @@ $ourpdf->setPaper('A4', 'portrait');
 // Render the HTML as PDF
 $ourpdf->render();
 
+session_start();
 if (isset($_POST["checkbox"])) {
     $ourdoc = $ourpdf->output();
+    echo $ourdoc;
     $_SESSION["thepdf"] = $ourdoc;
     echo $_SESSION["thepdf"];
     //include "./email.php";
