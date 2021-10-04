@@ -11,10 +11,12 @@
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);
 
-    //Using php dotenv:
-    require("vendor/autoload.php");
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-    $dotenv->load();
+    //Loading php dotenv file for development environment:
+    if (file_exists(".env")) {
+        require("vendor/autoload.php");
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+    }
 
     try {
         //Server settings - Using Gmail SMTP with TLS encryption:
