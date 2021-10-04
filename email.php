@@ -58,5 +58,3 @@
         echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 ?>
-<br/>
-<a href='./index.php'>Back</a>
