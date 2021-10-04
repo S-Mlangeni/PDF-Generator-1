@@ -74,7 +74,7 @@ if (isset($_POST["checkbox"])) {
     $_SESSION["thepdf"] = $ourdoc;
     //echo $_SESSION["thepdf"];
     include "./email.php";
-    echo "<br/><a href='./index.php'>Back</a>";
+    
 } else {
     // Output the generated PDF to Browser
     $ourpdf->stream("File.pdf", Array("Attachment"=>0));
