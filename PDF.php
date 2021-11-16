@@ -31,7 +31,7 @@ ob_start();
 <div class="wrapper">
     <h1 style="align-self: center">Interview Confirmation Letter </h1>
     <p>Dear <?php echo $username ?>,</p>
-    <p>I am contacting you to confirm the date and time of your job interview for 
+    <p>We are contacting you to confirm the date and time of your job interview for the
         <?php echo $jobPosition ?> position.
     </p>
     <p>The goal of this interview is for us to get to know you better. We also want 
