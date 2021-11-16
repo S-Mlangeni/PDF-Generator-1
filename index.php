@@ -7,13 +7,13 @@
     <title>PDF Generation</title>
     <!-- Bootstrap CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSSstyle.css">
 </head>
 <body>
     <div class="container shadow-lg p-3 mb-5 bg-white">
         <h1>Interview Confirmation</h1>
         <p>Please enter your interview details below</p>
-        <form action="pdfGeneration.php" method="POST"> 
+        <form action="PDF.php" method="POST"> 
             <div class="form-group mb-2">
                 <input class="form-control" name="username" type="text" placeholder="Name" required>
             </div> 

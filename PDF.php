@@ -73,7 +73,7 @@ if (isset($_POST["checkbox"])) {
     $ourdoc = $ourpdf->output();
     $_SESSION["thepdf"] = $ourdoc;
     //echo $_SESSION["thepdf"];
-    include "./email.php";
+    include "./mailer.php";
     echo "<br/><a href='./index.php'>Back</a>";
 } else {
     // Output the generated PDF to Browser
